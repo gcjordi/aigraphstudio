@@ -1,0 +1,88 @@
+name: Architecture / Analyzer Rule Proposal
+description: Propose a graph pattern, analyzer heuristic, node type or optimization rule
+title: "[Architecture]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for proposals that affect how AI Graph Studio represents,
+        evaluates or teaches agentic AI architectures.
+
+  - type: dropdown
+    id: proposal_type
+    attributes:
+      label: Proposal type
+      options:
+        - Architecture pattern
+        - Analyzer heuristic
+        - Node type
+        - Graph optimization rule
+        - Workflow template
+        - Harness or execution-policy concept
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What should be added or changed?
+      placeholder: Describe the proposal clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this useful?
+      description: Explain the architectural or practical problem it solves.
+    validations:
+      required: true
+
+  - type: textarea
+    id: detection
+    attributes:
+      label: Detection or representation logic
+      description: If this affects the analyzer, explain what condition should be detected or how the concept should be represented.
+      placeholder: |
+        Trigger condition:
+        Architectural signal:
+        Expected graph behavior:
+    validations:
+      required: false
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommended user-facing guidance
+      description: What warning, recommendation or explanation should AI Graph Studio show?
+
+  - type: textarea
+    id: false_positives
+    attributes:
+      label: False positives and edge cases
+      description: Describe legitimate cases where the heuristic should not warn, or where the pattern may be ambiguous.
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example graph or workflow
+      description: Provide a concrete example if possible.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Optional links to papers, documentation, specifications or implementations that support the proposal.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I understand analyzer scores and rules are heuristic rather than scientific measurements.
+          required: true
+        - label: I searched existing Issues and Discussions for similar proposals.
+          required: true

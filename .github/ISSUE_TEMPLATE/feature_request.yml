@@ -1,0 +1,70 @@
+name: Feature request
+description: Suggest a new feature or improvement for AI Graph Studio
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape AI Graph Studio.
+        Please focus on the problem to solve and the expected user value.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: Describe the user or architecture-design problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Describe the feature or improvement you would like to see.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Graph editor
+        - New node type
+        - Analyzer
+        - Simulator
+        - Token or cost estimation
+        - Templates
+        - Import or export
+        - Model routing
+        - Harness or execution policy modeling
+        - Internationalization
+        - Accessibility
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: If applicable, describe other approaches you considered.
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example workflow or use case
+      description: Show how this would be used in practice.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing Issues and Discussions for similar requests.
+          required: true
+        - label: This request is about AI Graph Studio itself, not general support for an external AI platform.
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and community discussion
+    url: https://github.com/gcjordi/aigraphstudio/discussions
+    about: Use Discussions for general questions, ideas, architecture conversations and community support.
+  - name: Security vulnerability
+    url: https://github.com/gcjordi/aigraphstudio/security/advisories/new
+    about: Report security vulnerabilities privately. Do not disclose exploit details in a public Issue.
