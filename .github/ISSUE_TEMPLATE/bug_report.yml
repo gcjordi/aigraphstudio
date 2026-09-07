@@ -1,0 +1,92 @@
+name: Bug report
+description: Report a reproducible problem in AI Graph Studio
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve AI Graph Studio.
+        Please provide enough detail for the issue to be reproduced.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+      placeholder: Tell us what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: Describe the expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest sequence of steps that reproduces the issue.
+      placeholder: |
+        1. Open...
+        2. Create...
+        3. Click...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Graph editor
+        - Nodes and properties
+        - Analyzer
+        - Simulator
+        - Token or cost estimation
+        - Templates
+        - Import or export
+        - Project storage
+        - Internationalization
+        - Accessibility
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: Example: Chrome 153, Firefox 145, Safari 26
+      placeholder: Browser and version
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Example: Windows 11, macOS 26, iOS 26, Android 17
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, exported project or additional context
+      description: Add screenshots or attach a minimal exported JSON project if useful. Do not include secrets or sensitive data.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing Issues and Discussions for duplicates.
+          required: true
+        - label: I removed secrets, credentials and sensitive information from anything I am attaching.
+          required: true
