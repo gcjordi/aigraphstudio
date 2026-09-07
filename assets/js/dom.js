@@ -1,0 +1,6 @@
+export function el(tag,attrs={},...children){const n=document.createElement(tag);for(const [k,v] of Object.entries(attrs)){if(k.startsWith('on'))n.addEventListener(k.slice(2).toLowerCase(),v);else if(k==='class')n.className=v;else if(k==='text')n.textContent=v;else if(k==='checked'||k==='disabled'||k==='selected')n[k]=!!v;else if(k==='value')n.value=v;else if(v!==undefined&&v!==null)n.setAttribute(k,v);}for(const c of children.flat()){if(c!==undefined&&c!==null)n.append(c instanceof Node?c:document.createTextNode(String(c)));}return n;}
+export function svgEl(tag,attrs={},text){const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e;}
+export const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function button(label,fn,attrs={}){return el('button',{type:'button',onclick:fn,...attrs},label);}
+export function field(label,input){const id='f-'+Math.random().toString(36).slice(2);input.id=id;return el('label',{class:'field',for:id},el('span',{},label),input);}
+export function select(items,value,onchange){return el('select',{onchange:e=>onchange(e.target.value)},items.map(([v,l])=>el('option',{value:v,selected:v===value},l)));}
