@@ -64,7 +64,7 @@ body:
     id: browser
     attributes:
       label: Browser
-      description: Example: Chrome 153, Firefox 145, Safari 26
+      description: "Example: Chrome 153, Firefox 145, Safari 26"
       placeholder: Browser and version
     validations:
       required: true
@@ -73,7 +73,7 @@ body:
     id: os
     attributes:
       label: Operating system
-      placeholder: Example: Windows 11, macOS 26, iOS 26, Android 17
+      placeholder: "Example: Windows 11, macOS 26, iOS 26, Android 17"
 
   - type: textarea
     id: attachments
