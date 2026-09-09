@@ -1,5 +1,21 @@
 # Security review — AI Graph Studio 1.0.0
 
+## Reporting a vulnerability
+
+If you discover a potential security vulnerability in AI Graph Studio, please do not report it through a public GitHub Issue.
+
+Instead, use GitHub's private vulnerability reporting feature for this repository. This allows security reports to be submitted privately to the repository maintainer.
+
+Please include, where possible:
+
+- A clear description of the vulnerability.
+- Steps to reproduce the issue.
+- The affected version or commit.
+- The potential security impact.
+- Any relevant proof of concept or supporting information.
+
+Security reports will be reviewed as soon as reasonably possible. Please avoid publicly disclosing the vulnerability until it has been assessed and, where appropriate, a fix has been made available.
+
 ## Scope and result
 
 Source review plus automated hostile-input checks and real Chrome integration tests. This is not an independent penetration test or certification. No runtime third-party dependencies, analytics, AI APIs, API keys, secrets or arbitrary code execution are present.
