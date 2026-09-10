@@ -1,0 +1,34 @@
+name: Sync to Hugging Face
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Hugging Face CLI
+        run: |
+          curl -LsSf https://hf.co/cli/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Sync AI Graph Studio to Hugging Face Space
+        env:
+          HF_OIDC_RESOURCE: spaces/gcjordi/ai-graph-studio
+        run: |
+          hf upload gcjordi/ai-graph-studio . . \
+            --repo-type space \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --commit-message "Sync from GitHub ${GITHUB_SHA::7}"
