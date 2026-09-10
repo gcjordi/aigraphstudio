@@ -31,4 +31,5 @@ jobs:
             --repo-type space \
             --exclude ".git/*" \
             --exclude ".github/*" \
+            --exclude "README.md" \
             --commit-message "Sync from GitHub ${GITHUB_SHA::7}"
